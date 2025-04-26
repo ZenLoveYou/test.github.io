@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+.card {
+    background: white;
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    animation: slideIn 1.5s ease-out;
+}
+
+@keyframes slideIn {
+    0% { transform: translateY(-100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ff4e50;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #444;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+button {
+    margin: 10px;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    transform: rotate(45deg);
+    animation: float 4s infinite ease-in-out;
+    opacity: 0.6;
+}
+
+.heart::before, .heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    left: -10px;
+    top: 0;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(45deg); opacity: 0.8; }
+    100% { transform: translateY(-100vh) rotate(45deg); opacity: 0; }
+}
+
+.promises {
+    text-align: left;
+    font-size: 1.2rem;
+    list-style: none;
+    padding: 0;
+}
+
+.promises li {
+    margin: 10px 0;
+}
