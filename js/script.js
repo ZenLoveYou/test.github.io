@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const storyText = "T cũng không biết phải nói như nào nữa,nhưng mà nào nhỉ.Mỗi khi nhìn m cạnh một thằng con trai khác,t lại thấy trong lòng lạ lắm.Nếu được thì,Will you be my girl? 🥺❤️";
+    const storyText = "Demo something";
     const storyElement = document.getElementById('story');
     let idx = 0;
 
